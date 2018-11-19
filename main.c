@@ -24,7 +24,7 @@ void outputCode(char array[]);
 int main(void) {
     int shiftAmount = 0;
     char array[1000];
-    //after var declarations say fopen thing below:
+    
     fp = fopen("csis.txt", "w");
     
     if(!(fpIn = fopen("congress.txt", "r"))) {
@@ -52,10 +52,6 @@ void processFile(char array[]){
         }
     }
     array[i] = '\0';
-
-    // read a message from a file (congress.txt) into a very large character array.DONE
-    //NEXT: The function should convert all of the letters into uppercase characters. DONE
-    //NEXT: You may discard all the punctuation marks, digits, blanks, and anything else from the input string. DONE
 }
 
 void cipher(char array[], int *shiftAmount){
@@ -73,7 +69,6 @@ void cipher(char array[], int *shiftAmount){
         }
         i++;
     }
-    //your program should accept the amount to shift as an input to a function, cipher(). The input parameter should be 13, although for your testing you can simplify it by using a shift of 1. Your function should encode each letter by shifting it the correct amount, and put the encoded letters into null-terminated array of characters.
 }
 
 void outputCode(char array[]){
@@ -88,5 +83,4 @@ void outputCode(char array[]){
         putchar(array[i]);
         putc(array[i], fp);
     }
-    //should output the final encoded message in blocks of five letters, ten blocks per line. The last line may be shorter than 5 blocks, and the last block may be shorter than 5 letters.
 }
